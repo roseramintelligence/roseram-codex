@@ -26,6 +26,18 @@ The server binds to loopback, prints a local URL, and sends model requests to Ro
 
 The live hosted route is [roseram.com/downloads/codex](https://roseram.com/downloads/codex). It uses Roseram sign-in, server-side plan/credit checks, and usage metering. The hosted workspace talks to the parent Roseram page using a restricted message bridge; the Node.js client instead uses a developer API key. A standalone repository clone does not independently implement Roseram account login or billing.
 
+## Terminal workflow
+
+Use Node.js 22 or later and set `ROSERAM_API_KEY` in your shell.
+
+```sh
+npm run terminal -- --mode plan --file src/index.mjs --prompt "Plan a small refactor of this entry point"
+```
+
+For available modes, run `npm run terminal -- --help`. An interactive terminal keeps the recent conversation in memory. Use `/clear` to reset it and `/quit` to exit. Model requests may use Roseram credits.
+
+Repeat `--file` for up to 12 explicitly selected UTF-8 files under the current directory, totaling up to 48 KB. Selected text is sent with each request. Review proposals before applying changes to your project.
+
 ## Current limitations
 
 The current browser client handles a prompt and one supplied text file. It does not access a local repository, run a terminal, or apply patches automatically.
