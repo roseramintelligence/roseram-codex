@@ -4,6 +4,10 @@ A coding workspace for understanding supplied source, exploring implementation i
 
 > **Current scope:** This repository publishes Roseram's current app source. It is an early browser/API client, not a native local-repository IDE or a clone of another company's private application.
 
+## Upstream integration
+
+Use the official Codex CLI with the Roseram Responses provider profile. [Setup instructions and configuration](upstream/README.md).
+
 ## What is included
 
 - `src/index.mjs`: self-contained Node.js local web app and Roseram API client.

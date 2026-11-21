@@ -1,0 +1,12 @@
+model = "roseram"
+model_provider = "roseram"
+approval_policy = "on-request"
+sandbox_mode = "read-only"
+
+[model_providers.roseram]
+name = "Roseram"
+base_url = "https://roseram.com/api/v1"
+env_key = "ROSERAM_API_KEY"
+wire_api = "responses"
+requires_openai_auth = false
+supports_websockets = false
